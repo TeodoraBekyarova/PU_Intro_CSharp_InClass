@@ -42,10 +42,14 @@ namespace PiggyBank
 
             //Console.WriteLine($"{(int)result} years");
 
-            result = Math.Round(result, 1,MidpointRounding.AwayFromZero);
-            string months = result.ToString().Split('.')[1];
-            Console.WriteLine($"{(int)result} years and {months} months");
-
+            if (result < 0)
+                Console.WriteLine("Never!");
+            else
+            {
+                result = Math.Round(result, 1, MidpointRounding.AwayFromZero);
+                string months = result.ToString().Split('.')[1];
+                Console.WriteLine($"{(int)result} years and {months} months");
+            }
 
 
 
